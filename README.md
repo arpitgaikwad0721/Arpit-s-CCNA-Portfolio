@@ -54,17 +54,6 @@ Jeremy-IT-Lab-CCNA/
 
 Each day's folder will contain a short `Day-XX.md` explaining what I learned and what I practiced, along with the relevant lab files and screenshots.
 
-## Day 01 — Network Devices
-
-Day 1 covered the basic building blocks of a network:
-
-- **Clients and servers**
-- **Switches**
-- **Routers**
-- **Firewalls**
-- **LANs**
-- Basic Packet Tracer practice
-
 ## Why I'm Keeping This Repository
 
 I'm using this repository as a personal learning log and practical portfolio. The idea is to document the process as I learn rather than only uploading final answers.
