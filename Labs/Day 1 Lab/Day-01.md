@@ -102,7 +102,7 @@ For this day, the lab folder contains:
 - `Day-01-Lab-Question.pkt` — original lab/question file
 - `Day-01-Lab-Solution.pkt` — completed Packet Tracer lab
 - `Screenshot-Final-Network-Setup.png` — screenshot of the completed topology
-- `Day_1.txt` — notes/working file
+- `Day_1.md` — notes/working file
 
 ## Takeaway
 
