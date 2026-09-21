@@ -1,4 +1,4 @@
-# Jeremy's IT Lab — CCNA 200-301
+# Arpit's CCNA Portfolio
 
 My hands-on progress through **Jeremy's IT Lab's CCNA 200-301 course**, documented day by day.
 
@@ -36,23 +36,23 @@ Jeremy-IT-Lab-CCNA/
 ├── README.md
 │
 ├── Day-01/
-│   ├── README.md
+│   ├── Day-01.md
 │   ├── Day-01-Lab-Question.pkt
 │   ├── Day-01-Lab-Solution.pkt
 │   └── Screenshot-Final-Network-Setup.png
 │
 ├── Day-02/
-│   ├── README.md
+│   ├── Day-02.md
 │   └── ...
 │
 ├── Day-03/
-│   ├── README.md
+│   ├── Day-03.md
 │   └── ...
 │
 └── ...
 ```
 
-Each day's folder will contain a short `README.md` explaining what I learned and what I practiced, along with the relevant lab files and screenshots.
+Each day's folder will contain a short `Day-XX.md` explaining what I learned and what I practiced, along with the relevant lab files and screenshots.
 
 ## Day 01 — Network Devices
 
@@ -64,17 +64,6 @@ Day 1 covered the basic building blocks of a network:
 - **Firewalls**
 - **LANs**
 - Basic Packet Tracer practice
-
-The Day 1 Packet Tracer lab put these concepts into practice by building a small network with two branches, routers, firewalls, switches, end hosts, an Internet section, and an attacker device.
-
-I also practiced basic Cisco IOS troubleshooting by checking router interfaces and enabling an interface that was administratively down.
-
-## Progress
-
-- [x] Day 01 — Network Devices
-- [ ] Day 02
-- [ ] Day 03
-- [ ] More to come...
 
 ## Why I'm Keeping This Repository
 
