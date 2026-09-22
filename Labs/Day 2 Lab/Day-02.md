@@ -1,5 +1,8 @@
 # CCNA 200-301 — Day 2: Interfaces and Cables
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 This document records my learning and hands-on work from **Day 2 of Jeremy's IT Lab — CCNA 200-301**.
