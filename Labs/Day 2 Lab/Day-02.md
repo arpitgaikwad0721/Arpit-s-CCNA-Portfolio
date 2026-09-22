@@ -139,6 +139,13 @@ Final_Solution_Lower_Part_Zoomed.png
 Adding_Modules_SingleMode_Multimode_On_Router.png
 ```
 
+### Lab Files
+
+I have included both the original **Packet Tracer lab question file** and my **completed solution file** for reference:
+
+- `Day+02+Lab+Question+Connecting+Devices.pkt` — Original lab question
+- `Day+02+Lab+Arpit+Solution.pkt` — My completed solution
+
 ## Conclusion
 
 Day 2 gave me a practical introduction to the **physical side of networking**. I now have a better understanding of Ethernet interfaces, copper and fiber cabling, cable selection, and basic Cisco interface commands.
