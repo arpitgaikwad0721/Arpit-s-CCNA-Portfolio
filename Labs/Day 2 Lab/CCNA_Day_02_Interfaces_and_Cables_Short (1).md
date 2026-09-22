@@ -152,6 +152,10 @@ The main thing I learned from Day 2 was that **network cabling is not just about
 
 The Packet Tracer lab helped me connect the theory with an actual network topology and gave me practical experience with Cisco interfaces and physical connections.
 
+### Cable Selection
+
+While completing the cabling, I considered both **distance and cost** when choosing the appropriate medium. For the **3 km R1–R3 link**, I used **single-mode fiber** because the distance is beyond the practical range of UTP and the multimode fiber standards covered in the course, while single-mode is designed for much longer distances. For the **250 m R3–R4 link**, I used **multimode fiber** because it supports this distance while being more cost-effective than single-mode; although single-mode could also support the distance, it would have been unnecessarily expensive for this link. For the remaining shorter connections, I used **UTP copper cabling**, since the distances were within the 100 m range covered in the course and UTP is generally cheaper and suitable for these connections. This made the cable selection a balance between **required distance, suitability, and cost** rather than simply using fiber everywhere.
+
 ## Lab Evidence
 
 Screenshots included with the lab show:
@@ -160,7 +164,7 @@ Screenshots included with the lab show:
 - Upper and lower sections of the topology
 - Router module installation for fiber connectivity
 
-Suggested filenames:
+filenames of screenshots:
 
 ```text
 01-full-topology.png
