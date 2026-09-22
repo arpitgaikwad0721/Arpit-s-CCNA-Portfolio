@@ -3,6 +3,10 @@
 ## Course
 **Jeremy's IT Lab — CCNA 200-301**
 
+## Day 01 — Overview
+
+On Day 01, I learned the basics of **network devices** including clients, servers, switches, routers, and firewalls. I then built the given network topology in **Cisco Packet Tracer**, connecting the New York and Tokyo branches through routers and firewalls. I also practiced basic **Cisco IOS commands** to access the router, check interface status using `show ip interface brief`, and troubleshoot interfaces that were administratively down using `no shutdown`. Finally, I verified that the complete topology was working with all links showing green.
+
 ## What I learned
 
 Day 1 introduced the basic devices that make up a network:
