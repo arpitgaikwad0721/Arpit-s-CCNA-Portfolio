@@ -1,5 +1,8 @@
 # CCNA 200-301 — Day 2: Interfaces and Cables
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 2 of **Jeremy's IT Lab CCNA 200-301** focused on network interfaces, Ethernet cabling, UTP, fiber optics, cable selection, and basic Cisco interface configuration.
