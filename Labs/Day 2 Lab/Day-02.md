@@ -132,13 +132,12 @@ Screenshots included with the lab show:
 
 filenames of screenshots:
 
-![Final Solution - Full View](Final_Solution_Full_View.png)
-
-![Final Solution - Upper Part Zoomed](Final_Solution_Upper_Part_Zoomed.png)
-
-![Final Solution - Lower Part Zoomed](Final_Solution_Lower_Part_Zoomed.png)
-
-![Adding Single-Mode and Multimode Modules on Router](Adding_Modules_SingleMode_Multimode_On_Router.png)
+-text
+Final_Solution_Full_View.png
+Final_Solution_Upper_Part_Zoomed.png
+Final_Solution_Lower_Part_Zoomed.png
+Adding_Modules_SingleMode_Multimode_On_Router.png
+-text
 
 ## Conclusion
 
