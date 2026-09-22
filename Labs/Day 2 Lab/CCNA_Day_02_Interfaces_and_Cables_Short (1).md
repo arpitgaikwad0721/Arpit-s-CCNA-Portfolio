@@ -9,43 +9,6 @@ Day 2 of **Jeremy's IT Lab CCNA 200-301** focused on network interfaces, Etherne
 
 I also completed the Day 2 Packet Tracer lab, where I connected routers, switches, PCs and a server using the appropriate cables and added the required router modules for fiber connections.
 
-
-## Topology
-
-The Packet Tracer lab was built around two small network sections connected through a router backbone:
-
-```text
-                         R1 ─────── R3
-                         │  3 km     │
-                       50 m         250 m
-                         │            │
-                         R2           R4
-                        /  \         /  \
-                      SW1  SW2     SW5  SW6
-                       │    │       │    │
-                      SW3  SW4     SW7  SW8
-                       │    │       │    │
-                      PC1  PC2     PC3  SRV1
-
-             SW1 ───── SW2          SW5 ───── SW6
-```
-
-### Main Connections
-
-- **R1 ↔ R2** — 50 m
-- **R1 ↔ R3** — 3 km
-- **R3 ↔ R4** — 250 m
-- **R2 ↔ SW1 / SW2**
-- **SW1 ↔ SW2**
-- **SW1 ↔ SW3 ↔ PC1**
-- **SW2 ↔ SW4 ↔ PC2**
-- **R4 ↔ SW5 / SW6**
-- **SW5 ↔ SW6**
-- **SW5 ↔ SW7 ↔ PC3**
-- **SW6 ↔ SW8 ↔ SRV1**
-
-The different link distances were useful for practicing cable selection, especially the longer router-to-router connections where fiber was required.
-
 ## What I Learned
 
 ### Ethernet & Interfaces
