@@ -132,12 +132,12 @@ Screenshots included with the lab show:
 
 filenames of screenshots:
 
--text
+```text
 Final_Solution_Full_View.png
 Final_Solution_Upper_Part_Zoomed.png
 Final_Solution_Lower_Part_Zoomed.png
 Adding_Modules_SingleMode_Multimode_On_Router.png
--text
+```
 
 ## Conclusion
 
