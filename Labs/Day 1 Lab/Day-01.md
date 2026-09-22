@@ -103,10 +103,10 @@ The final Packet Tracer topology was brought up successfully, with the connectio
 
 For this day, the lab folder contains:
 
-- `Day-01-Lab-Question.pkt` — original lab/question file
-- `Day-01-Lab-Solution.pkt` — completed Packet Tracer lab
-- `Screenshot-Final-Network-Setup.png` — screenshot of the completed topology
-- `Day_1.md` — notes/working file
+- `Day+01+Lab+Question+Simple+Network+Build.pkt` — original lab/question file
+- `Day+01+Lab+Arpit+Solution.pkt` — completed Packet Tracer lab
+- `Screenshot of Final Network Setup.png` — screenshot of the completed topology
+- `Day_01.md` — notes/working file
 
 ## Takeaway
 
