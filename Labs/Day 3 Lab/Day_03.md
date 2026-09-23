@@ -57,9 +57,12 @@ I also practiced:
 The Packet Tracer topology consisted of:
 
 ```text
-SRV1 ── SW1 ── R1 ── R2 ── SW2 ── PC1
-          │
-          └──────── SW2
+SRV1 ── SW1 ── R1 ── R2
+          │        │
+          │        └── 10.0.0.0/24
+  PC1 ── SW2
+       │ 
+ 192.168.1.0/24
 ```
 
 The main networks shown were:
@@ -113,7 +116,6 @@ The following files document my Day 3 practical work:
 - `DHCP_Configuration_On_Server.png` — DHCP configuration on SRV1.
 - `Ipconfig_options.png` — PC1 `ipconfig`, `ipconfig /release`, and `ipconfig /renew` practice.
 - `Complete_Network_Setup.png` — Complete Packet Tracer network topology.
-- `03-1+Slides+-+TCP-IP.pdf` — Day 3 TCP/IP course slides.
 
 ## Conclusion
 
