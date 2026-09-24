@@ -1,5 +1,8 @@
 # Day 3 — TCP/IP Model
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 3 of Jeremy's IT Lab CCNA 200-301 covered **protocols, standards, layered network models, the TCP/IP model, OSI model, encapsulation/decapsulation, and Protocol Data Units (PDUs)**. I also practiced these concepts in Cisco Packet Tracer using Simulation Mode and worked with `ipconfig`, `ipconfig /release`, and `ipconfig /renew`.
