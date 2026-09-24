@@ -148,7 +148,7 @@ The Day 4 lab folder contains the Packet Tracer files and separate router/switch
 ### Packet Tracer Files
 
 - `Day+04+Lab+Arpit+Solution.pkt` — My completed Packet Tracer solution
-- `Day+04+Lab+Question+Basic+Device+Secu....pkt` — Original Packet Tracer lab question
+- `Day+04+Lab+Question+Basic+Device+Security.pkt` — Original Packet Tracer lab question
 
 ### Switch Configuration
 
@@ -157,10 +157,10 @@ The `Switch Configuration` folder contains screenshots documenting the configura
 - `01_Network_Setup.png` — Initial network setup
 - `02_Hostname_SW1.png` — Switch hostname configuration
 - `03_Enable_Password_CCNA.png` — Enable password configuration
-- `04_CCNA_Password_Works_Running_Config....png` — Running configuration/password verification
-- `05_CCNA_Service_Password_Encryption_Run....png` — Service password encryption configuration
+- `04_CCNA_Password_Works_Running_Config.png` — Running configuration/password verification
+- `05_CCNA_Service_Password_Encryption_Running_Config.png` — Service password encryption configuration
 - `06_Enable_Secret_Cisco.png` — Enable secret configuration
-- `07_Show_MDI5_Encryption_Secret.png` — Encryption/enable secret verification
+- `07_Show_MD5_Encryption_Secret.png` — Encryption/enable secret verification
 - `08_Write_Write_Memory_Copy.png` — Saving the configuration
 
 ### Router Configuration
@@ -172,10 +172,10 @@ The `Router Configuration` folder contains screenshots documenting the router co
 - `03_Unencrypted_Password_CCNA.png` — Unencrypted enable password
 - `04_CCNA_Password_Works.png` — Password testing
 - `05_Running_Config_Show_CCNA_Password.png` — Running configuration verification
-- `06_CCNA_Encrypted_Service_Password_Encry....png` — Service password encryption
-- `07_CCNA_Password_Encrypted_Running_Con....png` — Encrypted password in running configuration
+- `06_CCNA_Encrypted_Service_Password_Encryption.png` — Service password encryption
+- `07_CCNA_Password_Encrypted_Running_Config.png` — Encrypted password in running configuration
 - `08_Enable_Secret_Cisco.png` — Enable secret configuration
-- `09_Cisco_Used_For_Password_Encryption_M....png` — Password encryption verification
+- `09_Cisco_Used_For_Password_Encryption_MD5.png` — Password encryption verification
 - `10_Write_Write_Memory_Copy_Works.png` — Saving the configuration
 
 ## Conclusion
