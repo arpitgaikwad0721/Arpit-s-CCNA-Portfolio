@@ -1,5 +1,8 @@
 # Day 04 — Introduction to the Cisco IOS CLI
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 4 focused on the **Cisco IOS CLI** and how to access and configure Cisco devices using the command line. I learned the different IOS modes, basic CLI navigation, password configuration, password encryption, configuration files, and how to save configurations.
