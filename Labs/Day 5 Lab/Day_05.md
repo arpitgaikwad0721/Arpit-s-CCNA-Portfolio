@@ -1,5 +1,8 @@
 # Day 05 – Ethernet LAN Switching
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 5 of Jeremy's IT Lab CCNA 200-301 course focused on **Ethernet LAN Switching** and the fundamentals of Layer 2 communication. I studied the Physical and Data Link layers of the OSI model, Protocol Data Units (PDUs), the structure of an Ethernet frame, MAC addresses, hexadecimal notation, and how switches learn and use MAC address tables.
