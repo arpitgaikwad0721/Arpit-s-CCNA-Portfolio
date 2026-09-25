@@ -102,11 +102,9 @@ Dynamic MAC addresses are removed from the MAC address table after **5 minutes o
 
 ## Learning Evidence
 
-I used the following course material while completing Day 5:
+I have uploaded this file as evidence of my learning today i.e. on Day 05:
 
-- `Day+05+Slides+-+Ethernet+LAN+Switching+(Part+1).pdf` — Jeremy's IT Lab CCNA 200-301 Day 5 course slides covering Ethernet LAN Switching, the Physical and Data Link layers, Ethernet frame structure, MAC addressing, hexadecimal notation, MAC address learning, forwarding, flooding, and review quizzes.
-
-The slides also contain visual examples of switches learning MAC addresses and updating their MAC address tables. The final quiz section reinforced concepts such as the role of the Preamble, MAC address length, the OUI, Source MAC address learning, and the difference between known and unknown unicast frames.
+- `Day_05.md` — Jeremy's IT Lab CCNA 200-301 Day 5 course covering Ethernet LAN Switching, the Physical and Data Link layers, Ethernet frame structure, MAC addressing, hexadecimal notation, MAC address learning, forwarding, and flooding etc.
 
 ## Conclusion
 
