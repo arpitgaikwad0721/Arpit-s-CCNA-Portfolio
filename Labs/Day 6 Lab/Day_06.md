@@ -218,7 +218,7 @@ The course material also demonstrated clearing dynamic MAC entries for a specifi
 
 ## Lab Evidence
 
-The Day 6 folder contains the Packet Tracer lab files, course slides, topology screenshots, Simulation Mode captures, ping results, and MAC address table outputs.
+The Day 6 folder contains the Packet Tracer lab files, topology screenshots, Simulation Mode captures, ping results, and MAC address table outputs.
 
 ### Packet Tracer Lab Files
 
@@ -226,10 +226,6 @@ I have included both the original **Packet Tracer lab question file** and my **c
 
 - `Day+06+Lab+Question+Ethernet+LAN+Switching.pkt` — Original Packet Tracer lab question
 - `Day+06+Lab+Arpit+Solution.pkt` — My completed Packet Tracer solution
-
-### Course Material
-
-- `Day+06+Slides+-+Ethernet+LAN+Switching+(Part+2).pdf` — Day 6 course slides covering Ethernet frames, ARP, ARP tables, ping/ICMP, MAC address tables, and clearing dynamic MAC addresses.
 
 ### Topology and ARP Evidence
 
