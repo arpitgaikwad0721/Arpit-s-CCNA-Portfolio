@@ -107,7 +107,7 @@ Dynamic MAC addresses are removed from the MAC address table after **5 minutes o
 
 I have uploaded this file as evidence of my learning today i.e. on Day 05:
 
-- `Day_05.md` — Jeremy's IT Lab CCNA 200-301 Day 5 course covering Ethernet LAN Switching, the Physical and Data Link layers, Ethernet frame structure, MAC addressing, hexadecimal notation, MAC address learning, forwarding, and flooding etc.
+- `Day_05.md` — I have uploaded my understanding of Jeremy's IT Lab CCNA 200-301 Day 5 course covering Ethernet LAN Switching, the Physical and Data Link layers, Ethernet frame structure, MAC addressing, hexadecimal notation, MAC address learning, forwarding, and flooding etc.
 
 ## Conclusion
 
