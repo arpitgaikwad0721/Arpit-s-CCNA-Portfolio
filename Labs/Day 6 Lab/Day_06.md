@@ -131,10 +131,10 @@ I then generated additional traffic by pinging other PCs, checked the learned MA
 
 ```text
 PC1 ── F0/1 ── SW1 ── G0/1 ── G0/1 ── SW2 ── F0/1 ── PC3
-                 │                              │
-               F0/2                           F0/2
-                 │                              │
-                PC2                            PC4
+                 │                     │
+               F0/2                  F0/2
+                 │                     │
+                PC2                   PC4
 
                     192.168.1.0/24
 ```
