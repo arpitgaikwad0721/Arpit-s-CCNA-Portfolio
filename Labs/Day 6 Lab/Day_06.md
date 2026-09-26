@@ -1,5 +1,8 @@
 # Day 6 — Ethernet LAN Switching (Part 2)
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 6 of Jeremy's IT Lab CCNA 200-301 course focused on **Ethernet LAN Switching (Part 2)**. I learned how Ethernet frames are structured, how **ARP** resolves IP addresses to MAC addresses, how **ping** uses ICMP, and how switches learn and use MAC address tables.
