@@ -184,11 +184,9 @@ The slides demonstrated the use of `127.0.0.1` and another address within the lo
 
 ## Learning Evidence
 
-I used the following course material for Day 7:
+I have uploaded the following material for Day 7:
 
-- `Day+07+Slides+-+IPv4+Addressing+(Part+1).pdf` — Jeremy's IT Lab course slides covering the Network Layer, IPv4 address structure, binary and decimal conversions, address classes, prefix lengths, subnet masks, network addresses, broadcast addresses and loopback addresses.
-
-The slides also included diagrams, worked conversion examples and nine review questions covering binary-to-decimal and decimal-to-binary conversions. These helped reinforce the concepts covered during the session.
+- `Day_07.md` — My writtern notes of Jeremy's IT Lab course Day 7 covering the Network Layer, IPv4 address structure, binary and decimal conversions, address classes, prefix lengths, subnet masks, network addresses, broadcast addresses and loopback addresses.
 
 ## Conclusion
 
