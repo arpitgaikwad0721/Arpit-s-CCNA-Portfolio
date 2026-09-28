@@ -230,10 +230,8 @@ The following files document the Day 8 theory and Packet Tracer work. The filena
 
 | File | What it demonstrates |
 |---|---|
-| `Day+08+Slides+-+IPv4+Addressing+(Part+2).pdf` | Course slides covering IPv4 address classes, host-count calculations, network and broadcast addresses, usable host ranges, and Cisco IP address configuration. |
 | `Day+08+Lab+Question+IPv4+Addresses.pkt` | The original Packet Tracer lab question file. |
 | `Day+08+Lab+Arpit+Solution.pkt` | My completed Packet Tracer solution. |
-| `Day+08+Lab+-+IPv4+Addresses.pkt` | Additional Packet Tracer lab file included with the Day 8 materials. |
 | `01_Full_Network_Setup.png` | The overall Packet Tracer topology and lab setup. |
 | `02_Hostname_Changed_To_R1.png` | The router hostname changed to `R1`. |
 | `03_Show_Ip_Interface_Brief.png` | The initial interface summary. |
