@@ -1,5 +1,8 @@
 # CCNA 200-301 – Day 8: IPv4 Addressing (Part 2)
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 8 of Jeremy's IT Lab CCNA 200-301 course focused on **IPv4 Addressing (Part 2)**. I continued learning how IPv4 addresses are divided into network and host portions, how to calculate the number of usable hosts, and how to identify the network address, broadcast address, and usable host range.
