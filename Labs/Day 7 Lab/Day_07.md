@@ -3,9 +3,6 @@
 ## Course
 **Jeremy's IT Lab — CCNA 200-301**
 
-## Course
-**Jeremy's IT Lab — CCNA 200-301**
-
 ## Overview
 
 Day 7 of Jeremy's IT Lab CCNA 200-301 course focused on **IPv4 Addressing (Part 1)**. I studied how IPv4 addresses are structured, how to convert between binary and decimal, and how network and host portions are identified.
