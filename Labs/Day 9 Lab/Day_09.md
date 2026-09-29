@@ -1,5 +1,8 @@
 # Day 09 – Interface Configuration
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 09 of Jeremy's IT Lab CCNA 200-301 course focused on **interface configuration** and the practical administration of Cisco network devices. The theory covered the purpose of configuring and managing device interfaces, while the Packet Tracer lab provided hands-on practice with hostnames, IPv4 addressing, interface descriptions, speed and duplex settings, and administratively disabling unused interfaces.
