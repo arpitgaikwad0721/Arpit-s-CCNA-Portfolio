@@ -181,16 +181,16 @@ The following diagram represents the devices and interface connections shown in 
                          172.16.0.0/16
 
  R1                         SW1                              SW2
-+---------+              +---------+                      +---------+
-|  2911   | G0/0    G0/1 | 2960-24TT| G0/2          G0/1 | 2960-24TT|
++---------+              +---------+                    +---------+
+|  2911   | G0/0    G0/1 |2960-24TT| G0/2          G0/1 |2960-24TT|
 |         |--------------|         |--------------------|         |
 +---------+              +----+----+                    +----+----+
                               |                              |
-                         F0/1 | F0/2                     F0/1 | F0/2
-                              |   |                          |   |
-                           +--+   +--+                    +---+  +---+
-                           | PC1   | PC2                  | PC3  | PC4 |
-                           +-------+-----                  +------+-----+
+                         F0/1 |     F0/2                F0/1 | F0/2
+                              |      |                       |   |
+                            +---+   +--+                 +---+  +---+
+                           | PC1   | PC2 |              | PC3  | PC4 |
+                           +-------+-----+              +------+-----+
 
 R1 G0/0: 172.16.255.254/16
 PC1:     172.16.0.1/16
@@ -221,8 +221,25 @@ PC4:     172.16.0.4/16
 
 The following Packet Tracer files were included with the Day 09 lab materials:
 
-- `Day+09+Lab+Question+Interface+Configuration.pkt` — the original lab question file.
-- `Day+09+Lab+Arpit+Solution.pkt` — the completed lab solution file.
+Day_09/
+│
+├── Day_09.md
+│
+├── Day+09+Lab+Question+Interface+Configuration.pkt
+├── Day+09+Lab+Arpit+Solution.pkt
+│
+├── 01_Full_Network_Setup.png
+├── 02_Hostname_To_R1.png
+├── 03_Hostname_To_SW1.png
+├── 04_Hostname_To_SW2.png
+├── 05_R1_IP_Address_Assigned_No_Shutdown.png
+├── 06_PC1_IP_Configurations.png
+├── 07_PC2_IP_Configurations.png
+├── 08_PC3_IP_Configurations.png
+├── 09_PC4_IP_Configurations.png
+├── 10_SW1_Show_Interface_Status.png
+├── 11_SW2_Show_Interface_Status.png
+└── 12_R1_Startup_Config_Shows_Desc.png
 
 The supplied screenshots document the network setup, hostname and IP configuration, switch interface status, and the router's startup configuration.
 
