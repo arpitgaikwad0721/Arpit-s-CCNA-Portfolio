@@ -1,6 +1,6 @@
 # Day 09 – Interface Configuration
 
-## Course
+## Course 
 **Jeremy's IT Lab — CCNA 200-301**
 
 ## Overview
