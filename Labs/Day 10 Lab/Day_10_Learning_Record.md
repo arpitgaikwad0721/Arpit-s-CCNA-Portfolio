@@ -2,6 +2,9 @@
 
 ## IPv4 Header and Routing Fundamentals
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 On Day 10, I studied the structure of an IPv4 packet and the purpose of the different fields in its header. I also examined packet captures in Wireshark to understand how IPv4 header information appears in actual traffic, including fragmentation and the Don’t Fragment (DF) flag.
