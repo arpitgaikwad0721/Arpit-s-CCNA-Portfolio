@@ -110,8 +110,7 @@ The course slides also included Cisco CLI examples such as `show ip route`, `sho
 
 ## Learning Evidence
 
-- `Day+10+Slides+-+IPv4+Header.pdf` – Course slides covering IPv4 packet structure, header fields, fragmentation, Wireshark packet captures and the review quiz.
-- `Day+11+(part+1)+Slides+-+Routing+Fundamentals.pdf` – The first part of the Day 11 course slides, which I covered on Day 10. It includes routing basics, routing-table entries, connected and local routes, route selection examples and review questions.
+- `Day-10.md` – My understanding of IPv4 packet structure, header fields, fragmentation, Wireshark packet captures and the review quiz. The first part of the Day 11, which I covered on Day 10. It includes routing basics, routing-table entries, connected and local routes, route selection examples and review questions. I have not included review questions here but have practised them on Anki.
 
 ## Conclusion
 
