@@ -48,7 +48,7 @@ The course examples helped me connect the IPv4 fragmentation fields with packet 
 
 In Wireshark, I reviewed the IPv4 header details in a packet capture, including the source and destination addresses, total length, identification, flags, fragment offset, TTL, protocol and header checksum. The examples showed how fragments belonging to the same packet can be identified and how the MF bit and fragment offset provide information about fragmentation.
 
-The course also showed ping examples using a larger packet size and the DF option. The `size 1000` example produced fragmented packets in the capture, while the DF-bit example showed that packets could not be sent successfully when fragmentation was disallowed.
+The course also showed ping examples using a larger packet size and the DF option. The `size 10000` example produced fragmented packets in the capture, while the DF-bit example showed that packets could not be sent successfully when fragmentation was disallowed.
 
 ### 4. Routing Fundamentals
 
