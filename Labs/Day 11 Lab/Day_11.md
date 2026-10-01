@@ -1,5 +1,8 @@
 # Day 11 – CCNA 200-301
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 11 of Jeremy’s IT Lab CCNA 200-301 course focused on **static routing**, including a review of connected and local routes, how routers forward packets, static-route configuration, and default routes. The theory covered how routers use their routing tables to make forwarding decisions and how static routes provide reachability to remote networks.
