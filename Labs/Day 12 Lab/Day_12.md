@@ -266,109 +266,188 @@ The screenshots document the network topology, the packet's progression through 
 
 #### Objective
 
-Trace a packet sent from **PC1 to PC3** and identify the source and
-destination MAC addresses at the two specified points in the route.
+Trace an ICMP packet sent from PC1 to PC3 within the same IPv4 network and identify the source and destination MAC addresses at the specified points along the route.
 
-#### Question Requirements
+#### Question Description
 
-The question asks for the source and destination MAC addresses at these
-segments:
+PC1 pings PC3. Using the CLI and Packet Tracer Simulation mode, inspect the packet at each of the following points and record its source and destination MAC addresses:
 
-  Point   Segment specified in the question   Required information
-  ------- ----------------------------------- --------------------------------------
-  A       PC1 → SW1                           Source and destination MAC addresses
-  B       SW1 → R1                            Source and destination MAC addresses
+- **A.** PC1 → SW1
+- **B.** SW1 → PC3
 
-The question instructs the learner to use the CLI and Packet Tracer
-Simulation mode to verify the answers. It also asks that a ping be
-performed before entering Simulation mode to complete the ARP/MAC
-learning process.
+Before entering Simulation mode, ping PC3 from PC1 once to complete the ARP and MAC address learning process. Then use the CLI and Simulation mode to verify the MAC addresses at both points.
 
 #### Network Topology
 
-**Pending detailed lab analysis.** The exact topology and relevant
-interface-level details for this question will be documented after
-reviewing the lab screenshots and Packet Tracer files.
+The lab uses a Cisco 2960-24TT switch (SW1) to connect PC1, PC2 and PC3 within the same IPv4 network. PC1 and PC3 communicate through SW1 without requiring routing, as both devices belong to the 192.168.1.0/24 subnet.
+
+| Device / Link | Interface | IPv4 address / Network |
+|---|---|---|
+| PC1 | FastEthernet0 | 192.168.1.1/24 |
+| PC2 | FastEthernet0 | 192.168.1.2/24 |
+| PC3 | FastEthernet0 | 192.168.1.3/24 |
+| SW1 | Fa0/1 (PC1), Fa0/2 (PC2), Fa0/3 (PC3) | Layer 2 switch |
+| SW1–R1 | SW1 Gi0/1 – R1 Gi0/0 | 192.168.1.0/24 LAN |
+| R1 | Gi0/0 | 192.168.1.254/24 |
+
+PC1 and PC3 are connected to SW1 through FastEthernet interfaces Fa0/1 and Fa0/3, respectively. SW1 also has an uplink to R1. However, traffic between PC1 and PC3 remains within the local LAN and does not pass through R1.
 
 #### Configuration Steps
 
-**Pending detailed lab analysis.** No device configuration steps are
-recorded at this stage.
+1. Used the existing Packet Tracer topology containing PC1, PC2, PC3, SW1 and R1.
+2. Verified the IPv4 addressing and physical MAC addresses using `ipconfig /all` on the PCs.
+3. From PC1, executed `ping 192.168.1.3` to generate ICMP traffic and complete the required ARP and MAC address learning process.
+4. Used `arp -a` on PC1 to inspect the learned IP-to-MAC address mappings.
+5. Opened the SW1 CLI and executed `show mac address-table` to inspect dynamically learned MAC addresses and their associated switch ports.
+6. Entered Packet Tracer Simulation mode and inspected the ICMP packet as it travelled from PC1 through SW1 to PC3.
+
+*Note: The screenshots demonstrate the addressing and verification steps. No new IP or switch configuration commands are evidenced.*
 
 #### Commands Practiced
 
-**Pending detailed lab analysis.** Commands used during the completed
-lab will be added after the solution is reviewed.
+| Command | Device | Purpose |
+|---|---|---|
+| `ping 192.168.1.3` | PC1 | Test connectivity to PC3 and generate ICMP traffic. |
+| `ipconfig /all` | PC1, PC3 | Inspect IPv4 configuration, subnet mask, default gateway and physical MAC address. |
+| `arp -a` | PC1 | Display the ARP cache and inspect learned IP-to-MAC mappings. |
+| `enable` | SW1 | Enter privileged EXEC mode. |
+| `show mac address-table` | SW1 | Display dynamically learned MAC addresses and their associated switch ports. |
 
 #### Verification and Results
 
-**Pending verification.** Packet Tracer Simulation observations and the
-verified MAC-address values will be added after analysing the lab
-evidence.
+The ping from PC1 (192.168.1.1) to PC3 (192.168.1.3) was successful. The captured output shows four replies, with four packets sent, four received and zero packet loss (0%).
+
+The PC1 ARP table showed the mapping for PC3 (192.168.1.3) as `0010.1333.3333`. The default gateway (192.168.1.254) was mapped to `0000.01aa.aaaa`.
+
+The SW1 MAC address table showed PC1's MAC address (`00D0.BA11.1111`) dynamically learned on Fa0/1 and the gateway MAC address (`0000.01aa.aaaa`) on Gi0/1.
+
+**Source and destination MAC addresses**
+
+| Point | Segment | Source MAC | Destination MAC |
+|---|---|---|---|
+| A | PC1 → SW1 | `00D0.BA11.1111` | `0010.1333.3333` |
+| B | SW1 → PC3 | `00D0.BA11.1111` | `0010.1333.3333` |
+
+At both points, the source MAC address is PC1's MAC address and the destination MAC address is PC3's MAC address. Since SW1 is forwarding the frame within the same LAN, it preserves both MAC addresses. The IP source and destination remain 192.168.1.1 and 192.168.1.3, respectively.
+
+Packet Tracer Simulation mode showed the ICMP packet progressing from PC1 to SW1 and then to PC3. The packet reached PC3, confirming successful communication between the two hosts.
 
 #### Lab Evidence and Subfolder Structure
 
-``` text
+```text
 Day 12 Lab Question 2/
-└── [Contents to be documented after detailed analysis]
+├── 01_Full_Network_Setup.png
+├── 02_PC1_To_PC3_Ping_Analysis_At_PC1.png
+├── 03_PC1_To_PC3_Ping_Analysis_At_SW1.png
+├── 04_PC1_To_PC3_Ping_Analysis_At_PC3.png
+└── 05_Reached_PC3.png
 ```
-
-The exact filenames, screenshots and solution contents will be added
-after the corresponding subfolder is reviewed.
 
 ### Packet Tracer Lab 3 -- Day 12 Lab Question 3
 
+
 #### Objective
 
-Trace a packet sent from **PC4 to PC1** and identify the source and
-destination MAC addresses at each point specified in the question.
+Trace an ICMP packet sent from PC4 to PC1 across multiple routers and identify the source and destination MAC addresses at each specified point along the route.
 
-#### Question Requirements
+#### Question Description
 
-The available question text asks for the source and destination MAC
-addresses at the specified points along the route to PC1. The exact
-point-by-point list is not fully available in the supplied question
-view, so it is left for confirmation during detailed lab analysis rather
-than inferred.
+PC4 pings PC1. Using the CLI and Packet Tracer Simulation mode, inspect the packet at each of the following points and record its source and destination MAC addresses:
+
+- **A.** PC4 → SW2
+- **B.** SW2 → R3
+- **C.** R3 → R2
+- **D.** R2 → R1
+- **E.** R1 → SW1
+- **F.** SW1 → PC1
+
+Before entering Simulation mode, ping PC1 from PC4 to complete the ARP and MAC address learning process. Then use the CLI and Simulation mode to verify the MAC addresses at each point along the route.
 
 #### Network Topology
 
-**Pending detailed lab analysis.** The exact topology and relevant
-interface-level details for this question will be documented after
-reviewing the lab screenshots and Packet Tracer files.
+The lab uses two Cisco 2960-24TT switches (SW1 and SW2) and three routers (R1, R2 and R3) to connect PC1 and PC4 across multiple IPv4 networks. PC4 and PC1 belong to different subnets, so their communication requires routing through R3, R2 and R1.
+
+| Device / Link | Interface | IPv4 address / Network |
+|---|---|---|
+| PC1 | FastEthernet0 | 192.168.1.1/24 |
+| SW1 | Fa0/1 (PC1), Gi0/1 (R1) | Layer 2 switch |
+| R1 | Gi0/0 | 192.168.1.254/24 |
+| R1–R2 | R1 Gi0/1 – R2 Gi0/0 | 192.168.12.0/24 |
+| R2 | Gi0/0 | 192.168.12.2/24 |
+| R2–R3 | R2 Gi0/1 – R3 Gi0/0 | 192.168.23.0/24 |
+| R3 | Gi0/0 | 192.168.23.3/24 |
+| R3 | Gi0/1 | 192.168.3.254/24 |
+| SW2 | Gi0/1 (R3), Fa0/1 (PC4) | Layer 2 switch |
+| PC4 | FastEthernet0 | 192.168.3.1/24 |
+
+PC4 is connected to SW2, which is connected to R3. R3 forwards traffic to R2, which forwards it to R1. R1 then forwards the packet through SW1 to PC1. Since PC1 and PC4 belong to different IPv4 subnets, the routers replace the Ethernet source and destination MAC addresses at each routed hop while retaining the original IP source and destination addresses.
 
 #### Configuration Steps
 
-**Pending detailed lab analysis.** No device configuration steps are
-recorded at this stage.
+1. Used the existing Packet Tracer topology containing PC1, PC4, SW1, SW2, R1, R2 and R3.
+2. Verified the IPv4 addressing and physical MAC addresses using `ipconfig /all` on PC4.
+3. From PC4, executed a ping command to generate ICMP traffic towards the 192.168.1.0/24 network.
+4. Used `arp -a` on PC4 to inspect the learned IP-to-MAC address mappings.
+5. Opened the SW2 CLI and executed `show mac address-table` to inspect dynamically learned MAC addresses and their associated switch ports.
+6. Opened the CLI of R3, R2 and R1 and executed `show arp` to inspect the ARP entries associated with their interfaces and neighbouring devices.
+7. Entered Packet Tracer Simulation mode and inspected the ICMP packet as it travelled from PC4 through SW2, R3, R2, R1 and SW1 to PC1.
+8. Examined the Layer 2 Ethernet headers at each router and switch to identify the source and destination MAC addresses.
+
+*Note: The screenshots demonstrate the addressing and verification steps. No new IP or routing configuration commands are evidenced.*
 
 #### Commands Practiced
 
-**Pending detailed lab analysis.** Commands used during the completed
-lab will be added after the solution is reviewed.
+| Command | Device | Purpose |
+|---|---|---|
+| `ping 192.168.1.1` | PC4 | Test connectivity to PC1 and generate ICMP traffic. |
+| `ipconfig /all` | PC4 | Inspect IPv4 configuration, subnet mask, default gateway and physical MAC address. |
+| `arp -a` | PC4 | Display the ARP cache and inspect learned IP-to-MAC mappings. |
+| `enable` | SW2, R1, R2, R3 | Enter privileged EXEC mode. |
+| `show mac address-table` | SW2 | Display dynamically learned MAC addresses and their associated switch ports. |
+| `show arp` | R1, R2, R3 | Display the ARP table and inspect IP-to-MAC mappings for directly connected devices. |
 
 #### Verification and Results
 
-**Pending verification.** Packet Tracer Simulation observations and the
-verified MAC-address values will be added after analysing the lab
-evidence.
+The ping from PC4 to the 192.168.1.0 network was successful, with four replies received from 192.168.1.1, four packets received and zero packet loss (0%).
+
+The PC4 configuration showed its IPv4 address as 192.168.3.1/24 and its physical MAC address as `000C.8544.4444`. The default gateway was 192.168.3.254.
+
+The SW2 MAC address table showed PC4's MAC address (`000C.8544.4444`) dynamically learned on Fa0/1 and the router's MAC address on Gi0/1.
+
+The ARP tables on R1, R2 and R3 showed the MAC addresses associated with their directly connected neighbours, allowing the Ethernet headers at the routed hops to be examined.
+
+**Source and destination MAC addresses**
+
+| Point | Segment | Source MAC | Destination MAC |
+|---|---|---|---|
+| A | PC4 → SW2 | `000C.8544.4444` | `0000.1FF.FFFF` |
+| B | SW2 → R3 | `000C.8544.4444` | `0000.1FF.FFFF` |
+| C | R3 → R2 | `0000.1EE.EEEE` | `0000.1DD.DDDD` |
+| D | R2 → R1 | `0000.1CCC.CCCC` | `0000.1BBB.BBBB` |
+| E | R1 → SW1 | `0000.1AAA.AAAA` | `00D0.BA11.1111` |
+| F | SW1 → PC1 | `0000.1AAA.AAAA` | `00D0.BA11.1111` |
+
+At the first routed hop, R3 replaces the incoming Ethernet header with a new one for forwarding towards R2. R2 performs the same operation when forwarding the packet to R1. R1 then creates a new Ethernet frame for delivery to PC1 through SW1.
+
+The IP source and destination addresses remain unchanged during this process, whereas the Ethernet MAC addresses change at each routed hop. SW1 operates at Layer 2 and forwards the frame to PC1 without modifying its source or destination MAC addresses.
+
+Packet Tracer Simulation mode showed the ICMP packet progressing from PC4 through SW2, R3, R2, R1 and SW1 towards PC1, illustrating the role of MAC addressing at each hop.
 
 #### Lab Evidence and Subfolder Structure
 
-``` text
+```text
 Day 12 Lab Question 3/
-└── [Contents to be documented after detailed analysis]
+├── 01_Full_Network_Setup.png
+├── 02_PC4_To_PC1_Ping_Analysis_At_PC4.png
+├── 03_PC4_To_PC1_Ping_Analysis_At_SW2.png
+├── 04_PC4_To_PC1_Ping_Analysis_At_R3.png
+├── 05_PC4_To_PC1_Ping_Analysis_At_R2.png
+├── 06_PC4_To_PC1_Ping_Analysis_At_R1.png
+├── 07_PC4_To_PC1_Ping_Analysis_At_SW1.png
+└── 08_PC4_To_PC1_Ping_Analysis_At_PC1.png
 ```
 
-The exact filenames, screenshots and solution contents will be added
-after the corresponding subfolder is reviewed.
-
 ## Commands Practiced
-
-The supplied Day 12 presentation focuses on packet flow, ARP and routing
-behaviour and does not provide IOS configuration command sequences. The
-lab questions explicitly mention using `ping`, the CLI and Packet Tracer
-Simulation mode.
 
   -------------------------------------------------------------------------
   Command / tool            Purpose                 Source
