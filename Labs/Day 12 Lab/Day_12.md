@@ -26,7 +26,7 @@ forwarded through the network toward that destination. The route may
 include multiple routers, and each router makes a forwarding decision
 using its routing table.
 
-The Day 12 presentation illustrates communication from **PC1
+The Day 12 example illustrates communication from **PC1
 (192.168.1.1)** to **PC4 (192.168.4.1)** through routers R1, R2 and R4.
 At each routed hop, the next-hop device and the outgoing interface
 determine the Layer 2 frame used for the next segment.
@@ -34,7 +34,7 @@ determine the Layer 2 frame used for the next segment.
 ### 2. ARP (Address Resolution Protocol)
 
 ARP is used to discover the MAC address associated with an IPv4 address
-on the local network. In the presentation, ARP is used whenever a device
+on the local network. In the learning module, ARP is used whenever a device
 needs the MAC address of the next-hop IP address before it can send an
 Ethernet frame.
 
@@ -59,7 +59,7 @@ needs to resolve the MAC address of its next hop.
 ### 3. Routing Table and Next-Hop Selection
 
 A router checks its routing table to determine how to forward a packet
-toward its destination network. The presentation shows these example
+toward its destination network. The module shows these example
 entries:
 
   Router   Destination network   Next hop / outgoing interface
@@ -75,7 +75,7 @@ the corresponding interface rather than sending it to another router.
 
 ### 4. Layer 2 Addressing Across Routed Hops
 
-The presentation tracks both IP addresses and MAC addresses as the
+The module tracks both IP addresses and MAC addresses as the
 packet moves across the topology.
 
 -   The **source and destination IP addresses** identify the original
@@ -101,7 +101,7 @@ network-layer packet is carried inside a Layer 2 frame. At a router, the
 incoming frame is processed and the packet is forwarded using a new
 Layer 2 frame appropriate for the outgoing segment.
 
-The examples in the slides show this process through the changing MAC
+The examples in the module show this process through the changing MAC
 addresses at each hop while the end-to-end IP addresses remain the same.
 
 ## Key Concepts
@@ -127,7 +127,7 @@ addresses at each hop while the end-to-end IP addresses remain the same.
 
   Broadcast MAC address               `ffff.ffff.ffff`, shown as the
                                       destination MAC for ARP requests in
-                                      the presentation.
+                                      the module.
 
   Routing table                       Information a router uses to select
                                       a route toward a destination
@@ -211,8 +211,6 @@ The topology also contains PC2 (192.168.1.2) and PC3 (192.168.1.3) connected to 
 3. Generated ICMP traffic by pinging PC4 (192.168.3.1) from PC1 (192.168.1.1) before entering Simulation mode, allowing ARP and MAC address learning to take place.
 4. Switched to Simulation mode and inspected the ICMP packet as it travelled through the network.
 5. Opened the CLI of the routers and switches to inspect their ARP and MAC address tables.
-
-*Note: The exact initial configuration commands are not visible in the supplied evidence.*
 
 #### Commands Practiced
 
@@ -299,7 +297,6 @@ PC1 and PC3 are connected to SW1 through FastEthernet interfaces Fa0/1 and Fa0/3
 5. Opened the SW1 CLI and executed `show mac address-table` to inspect dynamically learned MAC addresses and their associated switch ports.
 6. Entered Packet Tracer Simulation mode and inspected the ICMP packet as it travelled from PC1 through SW1 to PC3.
 
-*Note: The screenshots demonstrate the addressing and verification steps. No new IP or switch configuration commands are evidenced.*
 
 #### Commands Practiced
 
@@ -391,7 +388,6 @@ PC4 is connected to SW2, which is connected to R3. R3 forwards traffic to R2, wh
 7. Entered Packet Tracer Simulation mode and inspected the ICMP packet as it travelled from PC4 through SW2, R3, R2, R1 and SW1 to PC1.
 8. Examined the Layer 2 Ethernet headers at each router and switch to identify the source and destination MAC addresses.
 
-*Note: The screenshots demonstrate the addressing and verification steps. No new IP or routing configuration commands are evidenced.*
 
 #### Commands Practiced
 
@@ -445,39 +441,12 @@ Day 12 Lab Question 3/
 └── 08_PC4_To_PC1_Ping_Analysis_At_PC1.png
 ```
 
-## Commands Practiced
-
-  -------------------------------------------------------------------------
-  Command / tool            Purpose                 Source
-  ------------------------- ----------------------- -----------------------
-  `ping <destination-IP>`   Generate connectivity   Lab questions
-                            traffic to the          
-                            specified destination;  
-                            the lab questions ask   
-                            for a ping before       
-                            entering Simulation     
-                            mode to complete        
-                            ARP/MAC learning.       
-
-  Packet Tracer Simulation  Observe packet movement Lab questions
-  mode                      and inspect addressing  
-                            information at the      
-                            specified points.       
-
-  CLI                       Use the device          Lab questions
-                            command-line interface  
-                            as part of verifying    
-                            the answers.            
-  -------------------------------------------------------------------------
-
-Additional commands will be added here if they are identified in the
-detailed analysis of the three labs.
 
 ## Key Takeaways
 
 -   ARP resolves a local next-hop IPv4 address to a MAC address.
 -   ARP requests are broadcast, while ARP replies are unicast, as
-    illustrated in the presentation.
+    illustrated in the lesson.
 -   Routers use their routing tables to select the next hop or a
     directly connected outgoing interface.
 -   The source and destination IP addresses remain associated with the
@@ -489,9 +458,7 @@ detailed analysis of the three labs.
 -   Packet Tracer Simulation mode can be used to inspect packet movement
     and address information at particular points in a topology.
 -   The three practical questions apply these concepts to PC1-to-PC4,
-    PC1-to-PC3 and PC4-to-PC1 traffic. Their detailed configurations and
-    verified observations will be added after the individual lab
-    analyses.
+    PC1-to-PC3 and PC4-to-PC1 traffic. 
 
 ## Lab Evidence and Folder Structure
 
@@ -507,11 +474,18 @@ Day 12 Lab/
 ├── 01_Full_Network_Setup.png
 ├── Day 12 Lab Question Life of a Packet.pkt
 ├── Day 12 Lab Question 1/
-│   └── [To be documented after detailed analysis]
+│   └── 01_Full_Network_Setup.png
+│   └── 02_......................
+│   └── 03_......................
 ├── Day 12 Lab Question 2/
-│   └── [To be documented after detailed analysis]
+│   └── 01_Full_Network_Setup.png
+│   └── 02_......................
+│   └── 03_......................
 └── Day 12 Lab Question 3/
-    └── [To be documented after detailed analysis]
+│   └── 01_Full_Network_Setup.png
+│   └── 02_......................
+│   └── 03_......................
+
 ```
 
 ## Conclusion
@@ -522,5 +496,4 @@ the difference between end-to-end IP addressing and hop-by-hop MAC
 addressing. The three Packet Tracer questions apply these concepts to
 traffic between PCs on different networks. The detailed topology
 observations, configuration steps, commands, verification results and
-lab evidence will be incorporated into the corresponding lab sections
-after each lab is analysed.
+lab evidence is incorporated into the corresponding lab sections.
