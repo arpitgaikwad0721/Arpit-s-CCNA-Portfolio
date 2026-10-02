@@ -1,5 +1,8 @@
 # Day 12 -- Life of a Packet
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 12 of Jeremy's IT Lab CCNA 200-301 course focused on the **life of a
