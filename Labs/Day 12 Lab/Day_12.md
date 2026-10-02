@@ -172,6 +172,23 @@ screenshots and files are reviewed.
 
 ### Packet Tracer Lab 1 -- Day 12 Lab Question 1
 
+#### Objective
+
+Trace an ICMP packet sent from PC1 to PC4 through multiple routers and identify the source and destination MAC addresses at each specified point along the route.
+
+#### Question Description
+
+PC1 pings PC4. Using the CLI and Packet Tracer Simulation mode, inspect the packet at each of the following points and record its source and destination MAC addresses:
+
+- **A.** PC1 → SW1
+- **B.** SW1 → R1
+- **C.** R1 → R2
+- **D.** R2 → R3
+- **E.** R3 → SW2
+- **F.** SW2 → PC4
+
+Before entering Simulation mode, ping PC4 from PC1 once to complete the ARP and MAC address learning process. Then use the CLI and Simulation mode to verify the MAC addresses at all six points.
+
 #### Network Topology
 
 The lab uses three routers (R1, R2 and R3) and two switches (SW1 and SW2) to connect PC1 to PC4. PC1 and PC4 belong to different IPv4 networks, and traffic passes through all three routers.
