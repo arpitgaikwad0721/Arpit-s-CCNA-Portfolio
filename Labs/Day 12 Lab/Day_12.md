@@ -158,6 +158,7 @@ addresses at each hop while the end-to-end IP addresses remain the same.
                                       illustrated by R4's
                                       `192.168.4.0/24` route through
                                       `Gi0/2`.
+                                      
   -----------------------------------------------------------------------
 
 ## Packet Tracer Labs
