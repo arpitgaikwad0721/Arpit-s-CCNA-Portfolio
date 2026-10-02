@@ -15,9 +15,7 @@ ARP to resolve the MAC address of the next-hop device.
 The practical work consists of three Cisco Packet Tracer questions
 involving packet transmission between PCs on different networks. The
 questions focus on identifying source and destination MAC addresses at
-specified points along the route. Detailed lab configurations and
-evidence are reserved for later updates after the individual lab files
-and screenshots are analysed.
+specified points along the route. 
 
 ## What I Learned
 
