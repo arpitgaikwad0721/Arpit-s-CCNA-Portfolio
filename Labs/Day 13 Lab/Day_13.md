@@ -142,7 +142,7 @@ The final review slide confirmed that Day 13 covered:
 ## Learning Evidence
 
 - **`Day_13.md.pdf`** — My learnings form main day 13 course material from Jeremy's IT Lab. The topic covers IPv4 address classes, CIDR, CIDR notation, usable address calculations, subnetting basics, worked examples a subnetting and the final review.
-- 
+  
 
 ## Conclusion
 
