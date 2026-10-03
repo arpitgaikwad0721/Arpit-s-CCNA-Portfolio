@@ -1,5 +1,8 @@
 # Day 13 – Subnetting (Part 1)
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 13 of Jeremy's IT Lab CCNA 200-301 course focused on the basics of **CIDR (Classless Inter-Domain Routing)** and the **process of subnetting**. I studied why the older classful IPv4 addressing system could lead to wasted IP addresses, how CIDR removed the fixed Class A, B, and C prefix requirements, and how larger networks can be divided into smaller subnets for more efficient address usage. The course also introduced CIDR notation, calculating usable addresses from the number of host bits, and the basic process of dividing a `/24` network into smaller subnets.
