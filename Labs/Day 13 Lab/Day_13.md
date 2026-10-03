@@ -141,7 +141,8 @@ The final review slide confirmed that Day 13 covered:
 
 ## Learning Evidence
 
-- **`Day+13+Slides+-+Subnetting+(Part+1).pdf`** — Main Day 13 course material from Jeremy's IT Lab. The 33-page presentation covers IPv4 address classes, CIDR, CIDR notation, usable address calculations, subnetting basics, worked examples, a subnetting quiz, and the final review. The diagrams and tables throughout the presentation were also used to understand the examples and address calculations.
+- **`Day_13.md.pdf`** — My learnings form main day 13 course material from Jeremy's IT Lab. The topic covers IPv4 address classes, CIDR, CIDR notation, usable address calculations, subnetting basics, worked examples a subnetting and the final review.
+- 
 
 ## Conclusion
 
