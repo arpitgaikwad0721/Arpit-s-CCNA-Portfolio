@@ -197,7 +197,7 @@ This table made it easier to select a prefix based on either the required number
 
 ## Learning Evidence
 
-- **`Day+14+Slides+-+Subnetting+(Part+2).pdf`** — Main Day 14 course material covering Subnetting (Part 2), including Class C subnetting practice, subnetting tricks, subnet identification, subnet/host reference tables, Class B subnetting, worked examples, and quiz/review questions.
+- **`Day_14.md`** — Main Day 14 course taught me various topics covering Subnetting (Part 2), including Class C subnetting practice, subnetting tricks, subnet identification, subnet/host reference tables, Class B subnetting, worked examples, and quiz/review questions. It all helped me deepen my understanding.
 
 ## Conclusion
 
