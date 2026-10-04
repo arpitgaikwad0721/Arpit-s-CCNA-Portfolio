@@ -1,5 +1,8 @@
 # Day 14 – Subnetting (Part 2)
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 14 of Jeremy's IT Lab CCNA 200-301 course focused on **Subnetting (Part 2)**. The course material continued subnetting practice with Class C networks and then introduced subnetting Class B networks.
