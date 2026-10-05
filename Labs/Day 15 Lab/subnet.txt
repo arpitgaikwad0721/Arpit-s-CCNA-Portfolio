@@ -1,0 +1,35 @@
+64 hosts
+
+192.168.5.0/24 
+128
+192.168.5.0/25 network add
+192.168.5.1/25 first usable lan2
+192.168.5.126/25 last usable lan2
+192.168.5.127/25 broadcast address
+
+45 hosts
+
+192.168.5.128/26 network address
+192.168.5.129/26 first usable address
+192.168.5.190/26 last usable address
+192.168.5.191/26 broadcast address
+
+14 hosts 
+
+192.168.5.192/28 network address 16 
+192.168.5.193/28 first usable address
+192.168.5.206/28 last usable address
+192.168.5.207/28 broadcast address 
+
+9 hosts
+
+192.168.5.208/28 network address 16 hosts
+192.168.5.209/28 first usable
+192.168.5.222/28 last usable 
+192.168.5.223/28 broadcast address
+
+2 hosts 
+192.168.5.224/30 network address 4 hosts
+192.168.5.225/30 first usable
+192.168.5.226/30 last usable
+192.168.5.227/30 broadcast address
