@@ -1,5 +1,8 @@
 # Day 15 -- Subnetting (Part 3)
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 ## Overview
 
 Day 15 of Jeremy's IT Lab CCNA 200-301 course focused on **Subnetting
