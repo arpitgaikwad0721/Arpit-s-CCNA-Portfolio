@@ -522,7 +522,6 @@ Day 15 Lab/
 │
 ├── Day+15+Lab+Question+VLSM.pkt
 ├── Day+15+Lab+Arpit+Solution.pkt
-├── Day+15+Slides+-+Subnetting+(Part 3).pdf
 ├── subnet.txt
 │
 ├── 01_PC2_IP_Mask_Configuration.png
@@ -539,28 +538,6 @@ Day 15 Lab/
 └── 12_Full_Network_Works_All_Pings_Work.png
 ```
 
-### Important Evidence
-
--   `01_PC2_IP_Mask_Configuration.png` -- PC2 IP and subnet mask
-    configuration.
--   `02_R1_Interface_IP_Configure_No_Shutdown.png` -- R1 interface
-    configuration and interface status.
--   `03_R2_Interface_IP_Configure_No_Shutdown.png` -- R2 interface
-    configuration and interface status.
--   `06_R2_Show_IP_Route.png` -- R2 static routes and routing table.
--   `07_R1_Show_IP_Route.png` -- R1 static routes and routing table.
--   `08_IP_Subnetting_And_Network_Working.png` -- subnetting
-    requirements and network task.
--   `09_PC1_To_PC2_Ping_Works.png` -- PC1 to PC2 connectivity
-    verification.
--   `10_PC3_To_PC2_Ping_Works.png` -- PC3 to PC2 connectivity
-    verification.
--   `11_PC4_To_PC1_Ping_Works.png` -- PC4 to PC1 connectivity
-    verification.
--   `12_Full_Network_Works_All_Pings_Work.png` -- final full-network
-    connectivity verification.
-
-------------------------------------------------------------------------
 
 ## Consolidated Commands Practiced
 
