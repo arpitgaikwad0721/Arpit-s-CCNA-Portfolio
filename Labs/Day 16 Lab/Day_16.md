@@ -1,9 +1,7 @@
 # Day 16 – VLANs (Virtual Local Area Networks) Part 1
 
-> **Course:** Jeremy's IT Lab – CCNA 200-301  
-> **Day:** 16  
-> **Topic:** VLANs (Virtual Local Area Networks) Part 1  
-> **Lab:** VLAN Configuration and Connectivity Verification
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
 
 ## Overview
 
