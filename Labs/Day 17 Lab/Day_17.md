@@ -1,5 +1,8 @@
 # Day 17 -- VLANs Part 2: Trunk Ports and 802.1Q
 
+## Course
+**Jeremy's IT Lab — CCNA 200-301**
+
 > **Relearning Note:** Day 17 originally included both theory and a
 > Packet Tracer lab, but I did not understand the VLAN concepts well
 > enough during the first attempt. This record is therefore written as a
