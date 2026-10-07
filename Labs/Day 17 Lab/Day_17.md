@@ -63,7 +63,7 @@ A useful way to remember this:
 
 > **Trunk = multiple VLANs = VLAN identification is required.**
 
-The uploaded slides illustrate this with VLAN 10, VLAN 20, and VLAN 30
+The course example illustrate this with VLAN 10, VLAN 20, and VLAN 30
 traffic travelling across the trunk between SW1 and SW2.
 
 ------------------------------------------------------------------------
@@ -248,7 +248,7 @@ The VLAN range **1--4094** is divided into two sections:
   1--1005      Normal VLANs
   1006--4094   Extended VLANs
 
-The slides also note that some older devices cannot use the extended
+The course also note that some older devices cannot use the extended
 VLAN range, while modern switches can generally be expected to support
 it.
 
@@ -290,7 +290,7 @@ SW2 Native VLAN = 10
 An untagged frame received on the trunk is interpreted as belonging to
 VLAN 10.
 
-The slides demonstrate that when the native VLANs match, the frame can
+The course demonstrate that when the native VLANs match, the frame can
 be correctly understood by both switches.
 
 ### What happens if the native VLANs do not match?
@@ -308,7 +308,7 @@ An untagged frame sent by SW1 is interpreted by SW2 as belonging to VLAN
 This creates a mismatch because the two switches do not agree about
 which VLAN untagged traffic belongs to.
 
-The slides also show the opposite problem: if a frame is tagged with
+The course also show the opposite problem: if a frame is tagged with
 VLAN 30 when VLAN 30 is supposed to be the native VLAN, the receiving
 switch can discard it because native VLAN traffic is expected to be
 untagged.
@@ -340,14 +340,14 @@ switchport mode trunk
 This configures the switch interface as a trunk port.
 
 On switches where the trunk encapsulation must be manually selected, the
-slides show configuring 802.1Q first:
+course show configuring 802.1Q first:
 
 ``` text
 switchport trunk encapsulation dot1q
 switchport mode trunk
 ```
 
-The slides note that many modern switches support only 802.1Q, in which
+The course note that many modern switches support only 802.1Q, in which
 case manually selecting the encapsulation is not necessary.
 
 ## 3. Verify trunk interfaces
@@ -388,7 +388,7 @@ means VLAN 10 and VLAN 30 are included in the allowed VLAN list.
 
 ### Adding a VLAN
 
-The slides also introduce the `add` option:
+The course also introduce the `add` option:
 
 ``` text
 switchport trunk allowed vlan add 20
@@ -474,7 +474,7 @@ The practical topology shown in the slides contains:
 The important practical concept demonstrated is that a trunk link can
 carry traffic for multiple VLANs between network devices.
 
-The slides also show that VLAN 20 does not need a separate SW1--SW2 link
+The course also show that VLAN 20 does not need a separate SW1--SW2 link
 when there are no VLAN 20 PCs connected to SW1; inter-VLAN communication
 can instead involve R1.
 
@@ -538,8 +538,7 @@ can instead involve R1.
 
 ## 📌 Scope of This Day 17 Record
 
-This record intentionally stops after the **first portion of the
-uploaded 62-page Day 17 slide deck**, covering the material through the
+This record intentionally stops after covering the material through the
 initial trunk configuration and allowed-VLAN commands. The later
 **Router-on-a-Stick (ROAS)** material and remaining Day 17 topics are
 intentionally left for the next revision stage.
