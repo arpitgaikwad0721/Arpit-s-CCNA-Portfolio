@@ -1,5 +1,8 @@
 # Day 18 -- ITIS Assessment / Quiz
 
+**Organization:** TCS  
+**Department:** ITIS
+
 ## Overview
 
 Day 18 focused on an **ITIS-based assessment conducted through the TCS
