@@ -1,245 +1,117 @@
-# Day 18 -- ITIS Assessment / Quiz
+# Day 18 – VLAN Fundamentals (Revision of Day 16)
 
-**Organization:** TCS  
-**Department:** ITIS
+> **Course:** Jeremy's IT Lab – CCNA 200-301  
+> **Day:** 18  
+> **Topic:** VLANs (Virtual Local Area Networks) – Fundamentals  
+> **Learning Focus:** Revisiting and learning the first half of Day 16 content
 
 ## Overview
 
-Day 18 focused on an **ITIS-based assessment conducted through the TCS
-portal**. The assessment covered a combination of **IT Service
-Management, ServiceNow concepts, Linux administration, networking
-fundamentals, and Agile/service-management practices**.
+On Day 18, I revisited the first part of the VLAN topic covered on Day 16 of Jeremy's IT Lab CCNA 200-301 course. The focus was on understanding LANs, broadcast domains, VLANs, why VLANs are used, and how VLANs differ from IP subnets. I also reviewed the basic purpose of access ports and the command used to check VLAN assignments on a Cisco switch.
 
-The assessment was used to evaluate conceptual understanding and
-practical application of ITIS-related topics.
+This record covers the theory and fundamental concepts only. It does not document the full Day 16 Packet Tracer lab or claim that the complete VLAN configuration exercise was repeated.
 
-------------------------------------------------------------------------
+## What I Learned
 
-## Topics Covered
+- A **LAN (Local Area Network)** can be understood as a single broadcast domain.
+- A **broadcast domain** includes the devices that receive a broadcast frame sent by a member of that domain.
+- A **VLAN (Virtual Local Area Network)** logically separates devices at Layer 2.
+- VLANs are configured on a switch on a per-interface basis.
+- Each VLAN forms a separate Layer 2 broadcast domain.
+- A switch does not directly forward traffic between different VLANs.
+- Communication between different VLANs requires a Layer 3 device, such as a router.
+- VLANs can reduce unnecessary broadcast traffic by limiting the scope of broadcasts.
+- VLANs can logically separate departments or groups of devices for administrative and security purposes.
+- Different IP subnets alone do not automatically create separate Layer 2 broadcast domains; VLAN configuration provides that Layer 2 separation.
+- An **access port** belongs to one VLAN and is commonly used to connect an end device such as a PC.
+- The `show vlan brief` command displays VLANs and their assigned switch ports.
 
-### 1. IT Service Management and ITIL
+## Key Concepts
 
-The assessment covered fundamental IT service-management concepts,
-including:
+### 1. LAN and Broadcast Domain
 
--   ITIL 4 principles and guidance
--   Difference between ITIL 4 and ServiceNow
--   Incident management
--   Service requests and request fulfilment
--   Problem management
--   Recurring incidents and root-cause investigation
--   SLA targets and service expectations
--   Incident resolution and closure states
--   Impact and urgency in incident prioritization
--   Assignment Group and Assigned To
--   User-visible comments and internal Work Notes
--   Service restoration and resolution workflows
+A LAN is a group of devices in a local network. In the context of this lesson, a LAN can be described as a single broadcast domain.
 
-------------------------------------------------------------------------
+A broadcast domain is the group of devices that receive a broadcast frame sent by a member of that domain. The Ethernet broadcast destination MAC address is:
 
-### 2. ServiceNow Concepts
+```text
+FFFF.FFFF.FFFF
+```
 
-The assessment included practical ServiceNow-oriented scenarios
-involving:
+Routers separate broadcast domains because they do not forward Layer 2 broadcast frames from one interface to another.
 
--   Incident records
--   Service request workflows
--   Assignment Group
--   Assigned To
--   Additional Comments
--   Work Notes
--   Incident states
--   Resolution and closure
--   Service restoration
--   Problem investigation for recurring incidents
+### 2. VLANs
 
-The questions focused on understanding how different ServiceNow fields
-and workflows are used in an IT support environment.
+A VLAN is a logical separation of devices at **Layer 2**. VLANs allow a switch-based network to be divided into separate broadcast domains.
 
-------------------------------------------------------------------------
+For example:
 
-### 3. Linux Administration
+| Department | VLAN |
+|---|---:|
+| Engineering | VLAN 10 |
+| HR | VLAN 20 |
+| Sales | VLAN 30 |
 
-Linux-related questions covered:
+Devices in different VLANs are logically separated even when they are connected to the same physical switch.
 
--   `vi` editor search-and-replace commands
--   Linux directory navigation using `cd`
--   Understanding paths and `pwd`
--   File permissions
--   Reading Linux permission strings
--   Owner, group, and others permissions
--   File and directory permissions
--   Renaming and deleting files based on directory permissions
--   User and group management
--   `id` command
--   Primary and supplementary groups
--   `useradd`
--   Creating home directories
--   Adding users to supplementary groups
--   `find` command
--   Searching for files based on size
--   `-type`, `-size`, and `-xdev` options
+### 3. VLANs and IP Subnets
 
-------------------------------------------------------------------------
+IP subnets operate at Layer 3, while VLANs provide separation at Layer 2. Using different IP subnets does not, by itself, guarantee that devices belong to different Layer 2 broadcast domains.
 
-### 4. Networking Fundamentals
+For example, these are separate IPv4 subnets:
 
-The assessment also tested core networking concepts, including:
+- Engineering: `192.168.1.0/26`
+- HR: `192.168.1.64/26`
+- Sales: `192.168.1.128/26`
 
--   IPv4 addressing
--   Different IPv4 networks and communication between them
--   Layer 3 routing
--   Default gateway
--   ARP
--   MAC addresses
--   DNS
--   Hostname-to-IP resolution
--   Packet forwarding
--   Layer 2 addressing
--   Layer 3 addressing
--   Communication across multiple routers
--   Subnetting
--   CIDR notation
--   Network address
--   Usable host range
--   Broadcast address
--   Selecting an appropriate subnet based on host requirements
+VLANs must be configured appropriately to separate these groups into different Layer 2 broadcast domains.
 
-------------------------------------------------------------------------
+### 4. Communication Between VLANs
 
-### 5. Network Communication and Packet Delivery
+A switch does not directly route traffic between VLANs. When devices in different VLANs need to communicate, traffic must pass through a Layer 3 device, such as a router.
 
-The assessment included scenarios requiring understanding of how a host
-communicates with a remote server.
+```text
+VLAN 10 → Router / Layer 3 Device → VLAN 20
+```
 
-Concepts covered included:
+The Layer 3 device can route traffic between the associated IP networks, provided the necessary addressing and routing configuration is in place.
 
--   DNS resolution before communication with a hostname
--   Identifying whether a destination is on the local or remote network
--   Sending frames to the default gateway
--   ARP resolution for the gateway MAC address
--   Layer 2 address changes at routed hops
--   Preservation of IPv4 addressing across routed communication
--   Packet routing across multiple networks
--   Possibility of packets taking different routes through a network
+### 5. Access Ports
 
-------------------------------------------------------------------------
+An access port is assigned to a single VLAN and is commonly used to connect an end device.
 
-### 6. Agile and Continuous Improvement
+Example configuration:
 
-The assessment included concepts related to iterative improvement and
-feedback, such as:
+```text
+switchport mode access
+switchport access vlan 10
+```
 
--   Progressing iteratively with feedback
--   Collaboration
--   Visibility
--   Continuous improvement
--   Refining detection rules based on feedback from previous incidents
+The first command configures the interface as an access port. The second assigns it to VLAN 10.
 
-------------------------------------------------------------------------
+### 6. Purpose of VLANs
 
-## Assessment Performance
+**Performance:** VLANs divide a network into separate broadcast domains, helping limit unnecessary broadcast traffic.
 
--   **Assessment:** ITIS-based Communication / Business Skill Quiz
--   **Maximum Score:** 50
--   **Score Obtained:** 42
--   **Percentage:** 84%
--   **Performance Category:** High
--   **Questions:** 25
--   **Correct:** 21
--   **Incorrect:** 4
--   **Unanswered:** 0
--   **Marked for Review:** 0
+**Logical separation:** VLANs can separate groups such as Engineering, HR, and Sales. Traffic between VLANs must pass through a Layer 3 device, where suitable routing and security policies can be applied.
 
-The report categorizes **81%--90%** as the **High** performance range,
-placing the assessment result within that category.
+## Commands Reviewed
 
-------------------------------------------------------------------------
-
-## Areas Demonstrated Well
-
-Based on the assessment report, strong performance was demonstrated
-across several areas, including:
-
--   ITIL and service-management concepts
--   SLA understanding
--   Service request workflow
--   IPv4 networking
--   ARP and default gateway concepts
--   DNS troubleshooting
--   Linux navigation
--   Linux file permissions
--   Subnetting
--   Packet forwarding and Layer 2 addressing
--   Incident prioritization
--   Incident resolution concepts
--   Problem management fundamentals
-
-------------------------------------------------------------------------
-
-## Areas for Improvement
-
-The incorrect responses indicated areas that require further revision:
-
-### Linux File Searching
-
--   `find` command syntax
--   Searching for regular files based on size
--   Understanding options such as `-xdev`
-
-### ServiceNow Assignment Concepts
-
--   Difference between **Assignment Group** and **Assigned To**
--   Understanding team-level versus individual-level responsibility
-    within an incident
-
-### Linux User and Group Management
-
--   `useradd` options
--   `-m` for creating a home directory
--   `-G` for adding supplementary groups
--   Understanding primary versus supplementary groups
-
-### Agile / Continuous Improvement
-
--   Applying iterative improvement principles
--   Understanding how feedback from previous incidents can be used to
-    refine processes and detection rules
-
-------------------------------------------------------------------------
+| Command | Purpose |
+|---|---|
+| `show vlan brief` | Displays VLANs, their status, and assigned switch ports |
+| `switchport mode access` | Configures a switch interface as an access port |
+| `switchport access vlan 10` | Assigns an access port to VLAN 10 |
 
 ## Key Takeaways
 
-The assessment provided practical revision of several ITIS concepts that
-are relevant to IT support and infrastructure roles.
-
-The major areas covered were:
-
-1.  **ITIL and IT Service Management**
-2.  **ServiceNow workflows and incident management**
-3.  **Linux administration**
-4.  **Linux permissions and user/group management**
-5.  **IPv4 networking and subnetting**
-6.  **ARP, DNS, default gateway, and routing**
-7.  **Layer 2 and Layer 3 addressing**
-8.  **Problem management and recurring incidents**
-9.  **SLA and service expectations**
-10. **Agile and continuous improvement principles**
-
-The assessment also helped identify specific topics that need additional
-revision, particularly **Linux `find`, Linux user/group commands,
-ServiceNow assignment concepts, and iterative improvement principles**.
-
-------------------------------------------------------------------------
+1. A broadcast domain contains devices that receive broadcast frames from members of that domain.
+2. VLANs provide logical Layer 2 separation and create separate broadcast domains.
+3. Different IP subnets do not automatically provide Layer 2 VLAN separation.
+4. Access ports belong to a single VLAN and are commonly used for end devices.
+5. A Layer 3 device is required for communication between different VLANs.
+6. `show vlan brief` is useful for checking VLANs and their port assignments.
 
 ## Conclusion
 
-Day 18 was dedicated to evaluating my understanding of **ITIS concepts
-through a TCS portal-based assessment**. The assessment combined
-theoretical knowledge with scenario-based questions covering **IT
-Service Management, ServiceNow, Linux, networking, and Agile
-practices**.
-
-The result was **42/50 (84%)**, placing the performance in the **High**
-category. The assessment also highlighted a few topics that should be
-revised further to strengthen my ITIS fundamentals.
+Day 18 focused on revisiting the first half of the VLAN fundamentals from Day 16. I reviewed LANs, broadcast domains, the purpose of VLANs, the difference between VLANs and IP subnets, access ports, and basic VLAN verification. This revision strengthened my understanding of the concepts before moving on to more detailed VLAN configuration and practical exercises.
